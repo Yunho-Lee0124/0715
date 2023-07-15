@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>왜 불렀나, 휴먼?</title>
+  <title>Document</title>
   <script>//11_css파일을 참조하기 위해 아래 내용 추가</script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div>묵찌빠?</div>
+  <div>피카츄, 꼬부기 구별</div>
   <button type="button" onclick="init()">시작</button>
   <script>
     //19_원래는 for을 돌면서 웹캠을 실행시켜 줬으나, 여기서는 한 번 만으로 예측을 해야 하므로, 아래와 같은 새로운 버튼 추가
@@ -126,11 +126,11 @@
     }
     // 04_아래와 같이 loop()함수는 웹캠을 업데이트 시키면서 아래와 같은 예측(predict)을 실행한다.
     // 12 웹캠을 안 쓸 것이므로, 주석 처리
-    // async function loop() {
-    //   webcam.update(); // update the webcam frame
-    //   await predict();
-    //   window.requestAnimationFrame(loop);
-    // }
+     async function loop() {
+       webcam.update(); // update the webcam frame
+       await predict();
+       window.requestAnimationFrame(loop);
+     }
 
     // run the webcam image through the image model
     // 05_아래와 같은 예측(predict())함수는 모델을 이용해서 웹캠 이미지로 예측을 한 뒤, 클래스네임 : 및 확률을 더해서
